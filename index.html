@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokepon!</title>
+    <script src="./js/mokepon.js"></script>
+</head>
+<body>
+    <h1>MOKEPON! 🔥 💧 🌾</h1>
+
+    <section id="selccionar-mascota">
+        <h2>Elige tu mascota:</h2>
+
+        <!-- se deben meter al mismo grupo (name) para que se selecciones solo un valor -->
+
+        <!-- en label se usa el for para que se selecciones el input con el mismo id respectivamente -->
+        <label for="hipodoge">Hipodoge</label>
+        <input type="radio" name="mascota" id="hipodoge">
+
+        <label for="capipepo">Capipepo</label>
+        <input type="radio" name="mascota" id="capipepo">
+
+        <label for="ratigueya">Ratigueya</label>
+        <input type="radio" name="mascota" id="ratigueya">
+
+        <!-- id para mandar llamar el boton desde JS -->
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>Elige tu ataque</h2>
+
+        <!-- etiqueta span es para hacerla dinámica -->
+        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span>3</span> vidas</p>
+        <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span>3</span> vidas</p>
+
+        <p>
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua 💧</button>
+            <button id="boton-tierra">Tierra 🌾</button>
+        </p>
+    </section>
+
+    <section class="mensajes">
+        <p>Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA - GANASTE -</p>
+    </section>
+
+    <section class="reiniciar">
+        <button id="boton-reniciar">Reiniciar</button>
+    </section>
+    
+</body>
+</html>
