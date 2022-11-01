@@ -1,6 +1,18 @@
+let ataqueJugador
+let ataqueEnemigo
+
 function iniciarJuego() {
+    // traer el valor del boton con respecto al id
     let botonMascotaJugador = document.getElementById("boton-mascota")
+    // propiedad click con addEventListener y evento con respecto a la funcion
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
+
+    let botonFuego = document.getElementById("boton-fuego")
+    botonFuego.addEventListener('click', ataqueFuego)
+    let botonAgua = document.getElementById("boton-agua")
+    botonAgua.addEventListener('click', ataqueAgua)
+    let botonTierra = document.getElementById("boton-tierra")
+    botonTierra.addEventListener('click', ataqueTierra)
 }
 
 function seleccionarMascotaJugador() {
@@ -39,6 +51,23 @@ function seleccionarMascotaEnemigo(){
     } else{
         spanMascotaEnemigo.innerHTML = 'Ratigueya'
     }
+}
+
+function ataqueFuego() {
+    ataqueJugador = 'FUEGO'
+    ataqueAleatorioEnemigo()
+}
+function ataqueAgua() {
+    ataqueJugador = 'AGUA'
+    ataqueAleatorioEnemigo()
+}
+function ataqueTierra() {
+    ataqueJugador = 'TIERRA'
+    ataqueAleatorioEnemigo()
+}
+
+function ataqueAleatorioEnemigo() {
+    
 }
 
 function aleatorio(min, max){
